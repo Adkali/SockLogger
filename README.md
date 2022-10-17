@@ -12,12 +12,12 @@ A creative way to evade 'Real time protection' and 'Windows Firewall' on windows
 # Usage
 I made a test on my local windows 10 x64  machine [ VICTIM ] and it works perfectly.
 1. git clone the reposotory.
-2. cd SockLogger3.
+2. cd SockLogger.
 3. open a new terminal, press Ctrl+Shift+R and and terminal will split into two windows.
 4. On window number 1 with the help of using a python, open a server to your local machine on the SockLogger folder.
 5. On window number 1, use the on-top-command i wrote for a loop over and over.
 6. Download the script on the victim machine [ Real time protection 'ON' || Windows Firewall 'ON' ]
-7. after run it, wait for powershell window to gone, trytyping something and head over to the attacker machine.
+7. after run it, wait for powershell window to gone. try typing something and head over to the attacker machine.
 8. On window number 2, you should see the keystrokes you made [ On victim machine ]
 
 ![fff](https://user-images.githubusercontent.com/90532971/196167908-15377efc-6201-4da1-a5a9-b2ef8ae23fb3.png)
