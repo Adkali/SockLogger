@@ -1,5 +1,5 @@
 # SockLogger
-A creative way to evade 'Real Time Protection' and 'Windows Firewall' on windows, and obtain victim key-strokes by obfuscates keylogger and using 'nc' on remote machine. While i was looking for a way to make a simple keylogger, i tought it would be interesting to make an obfuscated keylogger which will executed upon a running .ps1(PowerShell Script) with a fake message says something about critical problems that must be handle right now using windows update. Started to make a script that will make 3 things. anyway, it mist first run as Administrator privilege.
+A NICE-creative way to evade 'Real Time Protection' and 'Windows Firewall' on windows OS, and obtain victim key-strokes by obfuscates keylogger and using 'nc' on remote machine. While i was looking for a way to make a simple keylogger, i tought it would be interesting to make an obfuscated keylogger which will executed upon a running .ps1(PowerShell Script) with a fake message says something about critical problems that must be handle right now using windows update. Started to make a script that will make 3 things. anyway, it must! first run as Administrator privilege.
 #### InShort:
 1. Turn off the Windows Firewall Center.
 2. enject a malicious DWORD on the registry which will make the real time protection going down upon a reboot.
